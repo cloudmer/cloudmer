@@ -1,0 +1,29 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+schema:
+  - name: im
+    path: .
+    commands:
+      build:
+        status: true
+        method: go build
+        args:
+          - -o ./bin/cloudmer
+      run:
+        status: true
+        method: ./bin/cloudmer
+    args:
+      - http
+      - -c
+      - ./config/http.yaml
+    watcher:
+      extensions:
+        - go
+      paths:
+        - /
+      ignored_paths:
+        - .git
+        - .realize
+        - vendor

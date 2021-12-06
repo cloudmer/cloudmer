@@ -1,0 +1,32 @@
+# http config
+http:
+  # 地址
+  addr: 0.0.0.0:8080
+# mysql 配置
+mysql:
+  # 数据库用户名
+  username: root
+  # 数据库密码
+  password: root
+  # 数据库端口
+  port: 3366
+  # 数据库地址
+  host: 192.168.10.73
+  # 数据库名称
+  dbname: working
+  # 字符类型
+  charset: utf8
+  # 连接timeout时间
+  timeout: 5s
+  # 读取超时时间
+  readTimeout: 60s
+  # 设置空闲连接池中连接的最大数量
+  maxIdleConns: 10
+  # 设置打开数据库连接的最大数量
+  maxOpenConns: 20
+  # 设置连接可复用的最大时间 单位分钟
+  maxLifetime: 10
+  # 表前缀
+  tablePrefix:
+  # 日志级别 Silent=1 Error=2 Warn=3 Info=4
+  logLevel: 4
